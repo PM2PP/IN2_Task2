@@ -1,0 +1,30 @@
+<entity-mappings 
+	xmlns="http://java.sun.com/xml/ns/persistence/orm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm 
+    http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+    version="1.0">
+	<package>de.hawhh.in2.aufg2</package>
+	<entity class="de.hawhh.in2.aufg2.Customer" name="Customer" access="FIELD">
+		<table name="CUSTOMER"/>
+		<attributes>
+			<id name="_id">
+				<column name="ID" length="30" />
+				<!--<generated-value strategy="SEQUENCE" generator="CUSTOMERGEN"/>
+				<sequence-generator name="CUSTOMERGEN" sequence-name="CUSTOMERSEQ"/>-->
+			</id>
+			<basic name="_vorname">
+				<column name="FIRSTNAME" length="30" />
+			</basic>
+			<basic name="_nachname">
+				<column name="FAMILYNAME" length="30" />
+			</basic>
+			<basic name="_datum">
+				<column name="ENTRYDATE" length="30" />
+			</basic>
+			<version name="_version">
+				<column name="VERSION" length="30"/>
+			</version>
+		</attributes>
+	</entity>
+</entity-mappings>
